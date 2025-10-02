@@ -7,8 +7,8 @@ import "./globals.css"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Portfolio - Your Name",
-  description: "Full Stack Developer Portfolio",
+  title: "Ronald Sun Portfolio",
+  description: "Personal Portfolio",
   generator: "v0.app",
 }
 

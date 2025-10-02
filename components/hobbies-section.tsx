@@ -20,6 +20,10 @@ export function HobbiesSection() {
     setLightboxMedia(null)
   }
 
+  const handleNavigate = (index: number) => {
+    setLightboxIndex(index)
+  }
+
   return (
     <section id="hobbies" className="min-h-screen flex items-center px-6 md:px-12 lg:px-24 py-16">
       <div className="max-w-4xl w-full mx-auto">
@@ -68,7 +72,14 @@ export function HobbiesSection() {
         </div>
       </div>
 
-      {lightboxMedia && <MediaLightbox media={lightboxMedia} initialIndex={lightboxIndex} onClose={closeLightbox} />}
+      {lightboxMedia && (
+        <MediaLightbox
+          media={lightboxMedia}
+          currentIndex={lightboxIndex}
+          onClose={closeLightbox}
+          onNavigate={handleNavigate}
+        />
+      )}
     </section>
   )
 }

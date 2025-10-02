@@ -47,6 +47,10 @@ export function MediaLightbox({
 
   const currentMedia = media[currentIndex]
 
+  if (!currentMedia) {
+    return null
+  }
+
   return (
     <div
       className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 animate-fade-in"
