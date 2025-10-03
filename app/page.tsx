@@ -12,10 +12,10 @@ export default function Home() {
     <main className="relative">
       <Navigation />
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <ExperienceSection />
       <ProjectsSection />
-      <SkillsSection />
+      {/* <SkillsSection /> */}
       <HobbiesSection />
       <ContactSection />
     </main>

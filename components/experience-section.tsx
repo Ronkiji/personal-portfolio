@@ -34,7 +34,7 @@ export function ExperienceSection() {
                     <p className="text-sm text-primary uppercase tracking-wider font-semibold">{exp.period}</p>
                   </div>
                   <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    {exp.title} · {exp.company}
+                    {exp.company} · {exp.title}
                     {exp.companyUrl && (
                       <a
                         href={exp.companyUrl}

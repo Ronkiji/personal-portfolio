@@ -21,6 +21,7 @@ export interface Project {
   category: string
   media?: ProjectMedia[]
   isPreAI?: boolean
+  skills: string[]
 }
 
 export interface Skill {
@@ -63,124 +64,160 @@ export interface PortfolioData {
 }
 
 export const portfolioData: PortfolioData = {
-  name: "Your Name",
-  title: "Full Stack Developer",
-  tagline: "I build accessible, pixel-perfect digital experiences for the web.",
+  name: "Ronald Sun",
+  title: "SWE & ML Dev",
+  tagline: "Code code code.",
 
   about: [
-    "I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.",
-    "Currently, I'm a Senior Full-Stack Developer at TechCorp, specializing in accessibility. I contribute to the creation and maintenance of UI components that power our platform's frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.",
-    "In the past, I've had the opportunity to develop software across a variety of settings — from advertising agencies and large corporations to start-ups and small digital product studios. Additionally, I also released a comprehensive video course a few years ago, guiding learners through building a web app with modern technologies.",
+    "a",
+    "b",
+    "c",
   ],
 
   experience: [
     {
-      period: "2024 — PRESENT",
-      title: "Senior Full Stack Developer",
+      period: "May 2024 — Aug. 2025",
+      title: "SWE DevOps",
       company: "Intel",
-      companyUrl: "https://example.com",
+      companyUrl: "https://www.intel.com",
       description:
-        "Build and maintain critical components used to construct the company's frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
-      skills: ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "PostgreSQL"],
-      logo: "/techcorp-logo.png",
+        "Worked in the SerDes IP team, developing infrastructure, automation, and tooling to support circuit design flows and optimize compute resources across multiple projects.",
+      skills: ["Python", "Perl", "AWS S3", "Linux/Unix", "Bash", "React", "Node.js", "PostgreSQL", "Scikit-learn", "Keras", "Confluence"],
+      logo: "experiences/intel.png",
     },
     {
-      period: "2022 — 2024",
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      companyUrl: "https://example.com",
+      period: "June 2022 — April 2024",
+      title: "SWE Fullstack",
+      company: "Canada Revenue Agency",
+      companyUrl: "https://www.canada.ca/en/revenue-agency.html",
       description:
-        "Developed and shipped highly interactive web applications for diverse clients including marketing agencies and e-commerce platforms. Collaborated with designers to transform Figma designs into responsive, accessible React components.",
-      skills: ["React", "TypeScript", "Tailwind CSS", "GraphQL", "Jest"],
-      logo: "/startupxyz-logo.png",
+        "Built and maintained internal web applications and backend services for the audit platform, supporting data processing, testing, and deployment within an Agile enterprise environment.",
+      skills: ["Angular", "TypeScript", "Java", "Spring Boot", "SQL", "JUnit", "Jenkins", "XML", "Agile & Scrum"],
+      logo: "experiences/cra.png",
     },
     {
-      period: "2020 — 2022",
-      title: "Junior Developer",
-      company: "Digital Agency",
-      companyUrl: "https://example.com",
+      period: "May 2022 — September 2022",
+      title: "SDE & PM",
+      company: "Fibonacci IT",
       description:
-        "Worked on client projects ranging from landing pages to full-scale web applications. Gained experience in modern web development practices and agile methodologies.",
-      skills: ["HTML", "CSS", "JavaScript", "React", "Git"],
-      logo: "/digitalagency-logo.png",
+        "Led a small team to deliver blockchain-based web products, including a decentralized liquidity pool platform and company website.",
+      skills: ["Fullstack", "Agile", "Project Management"],
+      logo: "experiences/fib.png",
+    },
+    {
+      period: "November 2019 — March 2020",
+      title: "Software Tester",
+      company: "Signority",
+      companyUrl: "https://www.signority.com",
+      description:
+        "Tested enterprise e-signature software by writing and executing automated end-to-end and regression test cases to ensure platform reliability.",
+      skills: ["QA Testing"],
+      logo: "experiences/signority.png",
+    },
+    {
+      period: "July 2019 — August 2019",
+      title: "Computer Engineer Co-op",
+      company: "Nokia",
+      companyUrl: "https://www.nokia.com",
+      description:
+        "Performed lab-side network setup by installing firmware and configurations on routers and deploying network racks, improving testing efficiency for the engineering team.",
+      skills: ["Grafana", "Prometheus", "Networking", "Security"],
+      logo: "experiences/nokia.png",
     },
   ],
 
   projects: [
     {
-      title: "E-Commerce Platform",
+      title: "Stock Forecasting Model",
       description:
-        "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      link: "https://github.com/yourusername/project",
-      category: "Web Application",
+        "Finalist in McGill x Fiam 2024 Hacks, Canada’s first ever portfolio management AI hackathon. Built an LSTM-based model to predict monthly stock returns for 1,000+ equities and portfolio backtesting strategies.",
+      link: "https://github.com/Ronkiji/FIAM-hack",
+      category: "Deep Learning Model",
+      skills: ["Python", "Keras", "Pandas", "NumPy", "Scikit-learn"],
       media: [
-        { type: "image", url: "/modern-ecommerce-interface.png" },
-        { type: "image", url: "/ecommerce-checkout-flow.jpg" },
+        { type: "image", url: "/stock-lstm-dashboard.png" },
+        { type: "image", url: "/stock-performance-plot.png" },
       ],
     },
     {
-      title: "Task Management App",
+      title: "Gunslinger’s Roulette",
       description:
-        "Collaborative task management tool with real-time updates, team workspaces, and advanced filtering capabilities.",
-      link: "https://github.com/yourusername/project",
-      category: "SaaS",
+        "Multiplayer Unity game featuring first-to-4 round shooter gameplay with betting and shooting phases. Developed networking, core mechanics, UI/UX, map design, animations, scoring, and 3D logic.",
+      link: "https://github.com/Ronkiji/Gunslingers-Roulette-Builds",
+      category: "Game",
+      skills: ["C#", "Unity", "Networking", "Photon"],
       media: [
-        { type: "image", url: "/task-management-kanban-dashboard.png" },
-        { type: "image", url: "/task-management-calendar-view.jpg" },
-        { type: "image", url: "/task-management-analytics.jpg" },
+        { type: "image", url: "/gunslingers-gameplay.png" },
+        { type: "image", url: "/gunslingers-lobby-screen.png" },
+        { type: "image", url: "/gunslingers-map.png" },
       ],
     },
     {
-      title: "Portfolio Template",
+      title: "Sentiment Knowledge Sharing",
       description:
-        "Open-source portfolio template built with Next.js and Tailwind CSS, featuring dark mode and smooth animations.",
-      link: "https://github.com/yourusername/project",
-      category: "Open Source",
-      media: [{ type: "image", url: "/elegant-portfolio-website-design.jpg" }],
+        "Improved a PhD-level NLP hate speech detection model, focusing on multi-head mechanisms and gated attention layers, increasing accuracy from 65% to 71%.",
+      link: "https://github.com/Ronkiji/SKS",
+      category: "NLP / Open Source",
+      skills: ["Python", "Tensorflow", "NLTK"],
+      media: [{ type: "image", url: "/sentiment-dashboard.png" }],
     },
     {
-      title: "Weather Dashboard",
-      description: "Real-time weather dashboard with location-based forecasts, interactive maps, and weather alerts.",
-      category: "Web Application",
-      media: [{ type: "image", url: "/weather-dashboard-with-maps-and-forecasts.jpg" }],
+      title: "Advent of Code",
+      description:
+        "Competitive programming: 2024 average ranking in top 1000. Best rank: 224.",
+      category: "Competitive Coding",
+      skills: ["Python"],
+      media: [{ type: "image", url: "/aoc-progress.png" }],
     },
+    // {
+    //   title: "ClipClap",
+    //   description:
+    //     "A lightweight tool for capturing and organizing frequently used text snippets for quick clipboard access.",
+    //   category: "Utility Tool",
+    //   media: [{ type: "image", url: "/clipclap-ui.png" }],
+    // },
     {
-      title: "Component Library",
-      description: "Accessible React component library with comprehensive documentation and Storybook integration.",
-      link: "https://github.com/yourusername/project",
-      category: "Open Source",
-      media: [{ type: "image", url: "/ui-component-library-showcase.jpg" }],
-    },
-    {
-      title: "Blog Platform",
-      description: "Modern blogging platform with markdown support, syntax highlighting, and SEO optimization.",
-      category: "Web Application",
-      media: [{ type: "image", url: "/modern-blog-platform.png" }],
-    },
-    {
-      title: "Classic Todo App",
-      description: "A simple yet elegant todo application built with vanilla JavaScript and local storage.",
-      category: "Web Application",
-      isPreAI: true,
-      media: [{ type: "image", url: "/classic-todo-app.jpg" }],
-    },
-    {
-      title: "Recipe Finder",
-      description: "Recipe search application using REST APIs with filtering and favorites functionality.",
-      link: "https://github.com/yourusername/recipe-finder",
-      category: "Web Application",
+      title: "RC Car",
+      description:
+        "Arduino-powered remote-controlled car with custom motor control, obstacle avoidance sensors, and a wireless joystick interface.",
+      link: "https://github.com/yourusername/rc-car",
+      category: "Arduino",
+      skills: ["Python"],
       isPreAI: true,
       media: [
-        { type: "image", url: "/recipe-finder-app.jpg" },
-        { type: "image", url: "/recipe-detail-view.jpg" },
+        { type: "image", url: "/rc-car-photo.jpg" },
+        { type: "image", url: "/rc-car-circuit.png" },
       ],
     },
     {
-      title: "Personal Blog",
-      description: "Static blog built with Jekyll and hosted on GitHub Pages, featuring custom themes.",
-      category: "Blog",
+      title: "Rooster",
+      description:
+        "A simple web application that sends scheduled email or text alerts for reminders and time-sensitive events.",
+      category: "Web Application",
+      link: "https://github.com/Ronkiji/Rooster-V2",
+      skills: ["Java", "JSP", "JavaScript", "MySQL", "HTML", "CSS", "Tomcat"],
       isPreAI: true,
-      media: [{ type: "image", url: "/personal-blog-jekyll.jpg" }],
+      media: [{ type: "image", url: "/rooster-ui.png" }],
+    },
+    {
+      title: "Torus Puzzle",
+      description:
+        "A puzzle game that challenges players to align colors and shapes on a toroidal grid with wrap-around movement.",
+      link: "https://github.com/Ronkiji/QWEB",
+      category: "Game",
+      skills: ["React", "Django", "Python"],
+      isPreAI: true,
+      media: [{ type: "image", url: "/torus-puzzle-screenshot.png" }],
+    },
+    {
+      title: "2048",
+      description:
+        "Recreated the classic 2048 puzzle game with smooth animations and score tracking using JavaScript and HTML5.",
+      link:  "https://github.com/Ronkiji/ICS3U-2048",
+      category: "Game",
+      skills: ["Java"],
+      isPreAI: true,
+      media: [{ type: "image", url: "/2048-screenshot.png" }],
     },
   ],
 
@@ -205,36 +242,33 @@ export const portfolioData: PortfolioData = {
 
   hobbies: [
     {
-      title: "Photography",
-      description: "Capturing moments and exploring composition through landscape and street photography.",
-      achievement: "Featured in National Geographic Local",
+      title: "Piano",
+      description: "Been at it for 15 years.",
+      achievement: "RCM 10 + Teaching + Weddings",
       media: [
         {
           type: "image",
           url: "/photography-landscape-mountains.jpg",
           description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
         },
+      ],
+    },
+    {
+      title: "3D Origami",
+      description: "A niche orgigami style that crafts intricate 3D sculptures by assembling many small folded paper units.",
+      achievement: "Won 1st place three years straight in 3D Artworks category for Young at Art",
+      media: [
         {
           type: "image",
-          url: "/photography-street-urban.jpg",
-          description: "Urban street photography - Downtown cityscape with reflections",
-        },
-        {
-          type: "image",
-          url: "/photography-nature-wildlife.jpg",
-          description: "Wildlife photography - Eagle in flight over lake",
+          url: "/photography-landscape-mountains.jpg",
+          description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
         },
       ],
     },
     {
-      title: "Open Source",
-      description: "Contributing to open source projects and maintaining my own libraries for the developer community.",
-      achievement: "500+ GitHub stars across projects",
-    },
-    {
       title: "Gaming",
-      description: "Competitive gaming in strategy and FPS titles, always looking to improve and learn.",
-      achievement: "Diamond Rank in League of Legends",
+      description: "Competitive gaming in MOBA and FPS titles, always looking to improve and learn.",
+      achievement: "D3 League of Legends",
       media: [
         {
           type: "video",
@@ -242,16 +276,12 @@ export const portfolioData: PortfolioData = {
           thumbnail: "/gaming-thumbnail.jpg",
           description: "Competitive gameplay highlight reel - Ranked match pentakill",
         },
-        {
-          type: "image",
-          url: "/gaming-setup-battlestation.jpg",
-          description: "My gaming setup - Custom built PC with RGB lighting",
-        },
       ],
     },
     {
-      title: "Music Production",
-      description: "Creating electronic music and experimenting with sound design in my home studio.",
+      title: "Table Tennis",
+      description: "Grinded 3x a week for 3-4 years",
+      achievement: "Achieved several top-three finishes in provincial table tennis competitions.",
       media: [
         {
           type: "image",
@@ -266,12 +296,20 @@ export const portfolioData: PortfolioData = {
         },
       ],
     },
+    {
+      title: "Other instruments",
+      description: "In addition to piano, I’ve learned clarinet, saxophone, guitar, bass, and accordion, performing in concerts, jazz ensembles, and orchestras.",
+    },
+    {
+      title: "Other racket sports",
+      description: "In addition to table tennis, I regularly play badminton, tennis, squash, and pickleball, enjoying both casual and competitive matches.",
+    },
   ],
 
   contact: {
-    email: "hello@example.com",
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    email: "ssun.ronald@gmail.com",
+    github: "https://github.com/Ronkiji",
+    linkedin: "https://www.linkedin.com/in/sunronald/",
     discord: "https://discord.gg/yourinvite",
     website: "https://yourwebsite.com",
   },
