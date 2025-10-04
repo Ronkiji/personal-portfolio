@@ -61,10 +61,14 @@ export function HobbiesSection() {
                 </div>
               )}
 
-              {hobby.achievement && (
-                <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border">
-                  <Trophy className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">{hobby.achievement}</span>
+              {hobby.achievements && hobby.achievements.length > 0 && (
+                <div className="mt-4 pt-4 border-t border-border space-y-2">
+                  {hobby.achievements.map((achievement, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                      <Trophy className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm font-medium text-primary">{achievement}</span>
+                    </div>
+                  ))}
                 </div>
               )}
             </Card>

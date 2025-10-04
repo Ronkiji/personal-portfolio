@@ -3,34 +3,21 @@
 import { portfolioData } from "@/lib/portfolio-data"
 import { ArrowUpRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { useState } from "react"
 import { MediaLightbox } from "./media-lightbox"
 
 export function ProjectsSection() {
-  const aiProjects = portfolioData.projects.filter((p) => !p.isPreAI)
-  const preAIProjects = portfolioData.projects.filter((p) => p.isPreAI)
-
   return (
     <section id="projects" className="min-h-screen flex items-center px-6 md:px-12 lg:px-24 py-16">
       <div className="max-w-4xl w-full mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-16">
-          {aiProjects.map((project, index) => (
+        <div className="grid md:grid-cols-2 gap-4">
+          {portfolioData.projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
-
-        {preAIProjects.length > 0 && (
-          <>
-            <h3 className="text-3xl font-bold mb-8 text-muted-foreground">Pre-AI Projects</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              {preAIProjects.map((project, index) => (
-                <ProjectCard key={index} project={project} index={index + aiProjects.length} />
-              ))}
-            </div>
-          </>
-        )}
       </div>
     </section>
   )
@@ -87,9 +74,16 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
         )}
         <div className="p-6">
           <div className="flex items-start justify-between mb-3">
-            <h3 className="text-xl font-semibold group-hover:text-primary transition-colors duration-300">
-              {project.title}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-xl font-semibold group-hover:text-primary transition-colors duration-300">
+                {project.title}
+              </h3>
+              {project.isPreAI && (
+                <Badge variant="secondary" className="text-xs">
+                  Pre-AI Era
+                </Badge>
+              )}
+            </div>
             {project.link && (
               <a
                 href={project.link}
@@ -103,6 +97,20 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             )}
           </div>
           <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+
+          {project.skills && project.skills.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.skills.map((skill, idx) => (
+                <span
+                  key={idx}
+                  className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          )}
+
           <span className="text-sm text-primary uppercase tracking-wider font-semibold">{project.category}</span>
         </div>
       </Card>

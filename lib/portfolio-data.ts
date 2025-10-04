@@ -39,7 +39,7 @@ export interface HobbyMedia {
 export interface Hobby {
   title: string
   description: string
-  achievement?: string
+  achievements?: string[] // Changed from single achievement to array of achievements
   media?: HobbyMedia[]
 }
 
@@ -68,11 +68,7 @@ export const portfolioData: PortfolioData = {
   title: "SWE & ML Dev",
   tagline: "Code code code.",
 
-  about: [
-    "a",
-    "b",
-    "c",
-  ],
+  about: ["a", "b", "c"],
 
   experience: [
     {
@@ -82,7 +78,19 @@ export const portfolioData: PortfolioData = {
       companyUrl: "https://www.intel.com",
       description:
         "Worked in the SerDes IP team, developing infrastructure, automation, and tooling to support circuit design flows and optimize compute resources across multiple projects.",
-      skills: ["Python", "Perl", "AWS S3", "Linux/Unix", "Bash", "React", "Node.js", "PostgreSQL", "Scikit-learn", "Keras", "Confluence"],
+      skills: [
+        "Python",
+        "Perl",
+        "AWS S3",
+        "Linux/Unix",
+        "Bash",
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Scikit-learn",
+        "Keras",
+        "Confluence",
+      ],
       logo: "experiences/intel.png",
     },
     {
@@ -163,8 +171,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Advent of Code",
-      description:
-        "Competitive programming: 2024 average ranking in top 1000. Best rank: 224.",
+      description: "Competitive programming: 2024 average ranking in top 1000. Best rank: 224.",
       category: "Competitive Coding",
       skills: ["Python"],
       media: [{ type: "image", url: "/aoc-progress.png" }],
@@ -213,7 +220,7 @@ export const portfolioData: PortfolioData = {
       title: "2048",
       description:
         "Recreated the classic 2048 puzzle game with smooth animations and score tracking using JavaScript and HTML5.",
-      link:  "https://github.com/Ronkiji/ICS3U-2048",
+      link: "https://github.com/Ronkiji/ICS3U-2048",
       category: "Game",
       skills: ["Java"],
       isPreAI: true,
@@ -244,7 +251,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "Piano",
       description: "Been at it for 15 years.",
-      achievement: "RCM 10 + Teaching + Weddings",
+      achievements: ["RCM 10", "Teaching", "Weddings"], // Changed to array
       media: [
         {
           type: "image",
@@ -255,8 +262,9 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "3D Origami",
-      description: "A niche orgigami style that crafts intricate 3D sculptures by assembling many small folded paper units.",
-      achievement: "Won 1st place three years straight in 3D Artworks category for Young at Art",
+      description:
+        "A niche orgigami style that crafts intricate 3D sculptures by assembling many small folded paper units.",
+      achievements: ["Won 1st place three years straight in 3D Artworks category for Young at Art"], // Changed to array
       media: [
         {
           type: "image",
@@ -268,7 +276,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "Gaming",
       description: "Competitive gaming in MOBA and FPS titles, always looking to improve and learn.",
-      achievement: "D3 League of Legends",
+      achievements: ["D3 League of Legends"], // Changed to array
       media: [
         {
           type: "video",
@@ -281,7 +289,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "Table Tennis",
       description: "Grinded 3x a week for 3-4 years",
-      achievement: "Achieved several top-three finishes in provincial table tennis competitions.",
+      achievements: ["Achieved several top-three finishes in provincial table tennis competitions."], // Changed to array
       media: [
         {
           type: "image",
@@ -298,11 +306,13 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Other instruments",
-      description: "In addition to piano, I’ve learned clarinet, saxophone, guitar, bass, and accordion, performing in concerts, jazz ensembles, and orchestras.",
+      description:
+        "In addition to piano, I've learned clarinet, saxophone, guitar, bass, and accordion, performing in concerts, jazz ensembles, and orchestras.",
     },
     {
       title: "Other racket sports",
-      description: "In addition to table tennis, I regularly play badminton, tennis, squash, and pickleball, enjoying both casual and competitive matches.",
+      description:
+        "In addition to table tennis, I regularly play badminton, tennis, squash, and pickleball, enjoying both casual and competitive matches.",
     },
   ],
 

@@ -12,7 +12,14 @@ export function Navigation() {
   const scrollToSection = (section: string) => {
     const element = document.getElementById(section.toLowerCase())
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      const offset = 0
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      })
       setIsOpen(false)
     }
   }
@@ -28,7 +35,7 @@ export function Navigation() {
                 onClick={() => scrollToSection(section)}
                 className="group flex items-center gap-4 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                <span className="h-px w-8 bg-muted-foreground group-hover:w-16 group-hover:bg-foreground transition-all" />
+                <span className="h-px w-8 bg-muted-foreground group-hover:w-14 group-hover:bg-foreground transition-all duration-300 ease-in-out" />
                 <span className="uppercase tracking-wider">{section}</span>
               </button>
             </li>

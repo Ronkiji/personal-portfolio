@@ -121,6 +121,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: radial-gradient(ellipse at 20% 30%, #1a0a1f 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, #0d0005 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, #2d0a2d 0%, transparent 60%), #000000;
+    background-attachment: fixed;
   }
   html {
     scroll-behavior: smooth;
