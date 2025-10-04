@@ -1,7 +1,6 @@
 import { portfolioData } from "@/lib/portfolio-data"
 import { Button } from "@/components/ui/button"
-import { Mail, Github, Linkedin, ExternalLink } from "lucide-react"
-import { MessageCircle } from "lucide-react"
+import { Mail, Github, Linkedin, ExternalLink, MessageCircle, BotMessageSquare, Phone } from "lucide-react"
 
 export function ContactSection() {
   return (
@@ -24,6 +23,19 @@ export function ContactSection() {
                 {portfolioData.contact.email}
               </a>
             </div>
+
+            {portfolioData.contact.phone && (
+              <div className="flex items-center gap-4">
+                <Phone className="h-5 w-5 text-muted-foreground" />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg hover:text-foreground transition-colors flex items-center gap-2"
+                >
+                  {portfolioData.contact.phone}
+                </a>
+              </div>
+            )}
 
             {portfolioData.contact.github && (
               <div className="flex items-center gap-4">
@@ -57,18 +69,17 @@ export function ContactSection() {
 
             {portfolioData.contact.discord && (
               <div className="flex items-center gap-4">
-                <MessageCircle className="h-5 w-5 text-muted-foreground" />
+                <BotMessageSquare className="h-5 w-5 text-muted-foreground" />
                 <a
-                  href={portfolioData.contact.discord}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg hover:text-foreground transition-colors flex items-center gap-2"
                 >
-                  Discord
-                  <ExternalLink className="h-4 w-4" />
+                  Discord: {portfolioData.contact.discord}
                 </a>
               </div>
             )}
+
           </div>
 
           <Button size="lg" asChild className="mt-8">

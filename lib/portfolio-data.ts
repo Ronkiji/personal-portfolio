@@ -49,6 +49,7 @@ export interface ContactInfo {
   linkedin?: string
   discord?: string
   website?: string
+  phone?: string
 }
 
 export interface PortfolioData {
@@ -66,7 +67,7 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   name: "Ronald Sun",
   title: "SWE & ML Dev",
-  tagline: "Code code code.",
+  tagline: "I really like coding when it works.",
 
   about: ["a", "b", "c"],
 
@@ -250,45 +251,19 @@ export const portfolioData: PortfolioData = {
   hobbies: [
     {
       title: "Piano",
-      description: "Been at it for 15 years.",
-      achievements: ["RCM 10", "Teaching", "Weddings"], // Changed to array
+      description: "Been playing consitently for 15 years just to be worse than child prodigies. Currently learning jazz :)",
+      achievements: ["RCM Level 10", "Wedding performance"],
       media: [
         {
           type: "image",
           url: "/photography-landscape-mountains.jpg",
           description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
-        },
-      ],
-    },
-    {
-      title: "3D Origami",
-      description:
-        "A niche orgigami style that crafts intricate 3D sculptures by assembling many small folded paper units.",
-      achievements: ["Won 1st place three years straight in 3D Artworks category for Young at Art"], // Changed to array
-      media: [
-        {
-          type: "image",
-          url: "/photography-landscape-mountains.jpg",
-          description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
-        },
-      ],
-    },
-    {
-      title: "Gaming",
-      description: "Competitive gaming in MOBA and FPS titles, always looking to improve and learn.",
-      achievements: ["D3 League of Legends"], // Changed to array
-      media: [
-        {
-          type: "video",
-          url: "/gaming-highlight-reel.mp4",
-          thumbnail: "/gaming-thumbnail.jpg",
-          description: "Competitive gameplay highlight reel - Ranked match pentakill",
         },
       ],
     },
     {
       title: "Table Tennis",
-      description: "Grinded 3x a week for 3-4 years",
+      description: "Played table tennis competitively. Currently trying to get back to my prime.",
       achievements: ["Achieved several top-three finishes in provincial table tennis competitions."], // Changed to array
       media: [
         {
@@ -301,6 +276,32 @@ export const portfolioData: PortfolioData = {
           url: "/music-production-session.mp4",
           thumbnail: "/music-production-thumbnail.jpg",
           description: "Live production session - Creating a synthwave track",
+        },
+      ],
+    },
+    {
+      title: "Esports gaming",
+      description: "I enjoy competitive games... maybe a bit too much.",
+      achievements: ["D2 League of Legends", "Champion League and Unreal in Fortnite", "Peak 1772 in rapids (Chess.com)"], // Changed to array
+      media: [
+        {
+          type: "video",
+          url: "/gaming-highlight-reel.mp4",
+          thumbnail: "/gaming-thumbnail.jpg",
+          description: "Competitive gameplay highlight reel - Ranked match pentakill",
+        },
+      ],
+    },
+    {
+      title: "3D Origami (and other styles)",
+      description:
+        "A niche orgigami style that crafts intricate 3D sculptures by assembling many small folded paper units. Competed in Young at Arts competitions.",
+      achievements: ["2016 3D Category Winner + Junior Award, YAA", "2017 3D Category Winner + Junior Award, YAA", "2019 3D Category Winner, YAA"], // Changed to array
+      media: [
+        {
+          type: "image",
+          url: "/photography-landscape-mountains.jpg",
+          description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
         },
       ],
     },
@@ -320,7 +321,8 @@ export const portfolioData: PortfolioData = {
     email: "ssun.ronald@gmail.com",
     github: "https://github.com/Ronkiji",
     linkedin: "https://www.linkedin.com/in/sunronald/",
-    discord: "https://discord.gg/yourinvite",
     website: "https://yourwebsite.com",
+    discord: "ronkiji",
+    phone: "(613)-663-6733"
   },
 }

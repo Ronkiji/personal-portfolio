@@ -37,15 +37,6 @@ export function HeroSection() {
             <Linkedin className="h-6 w-6" />
           </a>
           <a
-            href={portfolioData.contact.twitter}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-            aria-label="Twitter"
-          >
-            <Twitter className="h-6 w-6" />
-          </a>
-          <a
             href={`mailto:${portfolioData.contact.email}`}
             className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
             aria-label="Email"
