@@ -165,8 +165,8 @@ export const portfolioData: PortfolioData = {
       category: "Game",
       skills: ["C#", "Unity", "Networking", "Photon"],
       media: [
-        { type: "image", url: "/projects/gunslingers-poster.png" },
-        { type: "video", url: "/projects/gunslingers-video.mp4", thumbnail: "/projects/gunslingers-thumbnail.png"},
+        { type: "image", url: "projects/gunslingers-poster.png" },
+        { type: "video", url: "projects/gunslingers-video.mp4", thumbnail: "projects/gunslingers-thumbnail.png"},
       ],
     },
     {
@@ -177,10 +177,10 @@ export const portfolioData: PortfolioData = {
       category: "NLP / Open Source",
       skills: ["Python", "Tensorflow", "NLTK"],
       media: [
-        { type: "image", url: "/projects/sks-1.png" },
-        { type: "image", url: "/projects/sks-2.png" },
-        { type: "image", url: "/projects/sks-3.png" },
-        { type: "image", url: "/projects/sks-4.png" },
+        { type: "image", url: "projects/sks-1.png" },
+        { type: "image", url: "projects/sks-2.png" },
+        { type: "image", url: "projects/sks-3.png" },
+        { type: "image", url: "projects/sks-4.png" },
       ],
     },
     {
@@ -190,11 +190,11 @@ export const portfolioData: PortfolioData = {
       category: "Competitive Coding",
       skills: ["Python"],
       media: [
-        { type: "image", url: "/projects/aoc2024.png" },
-        { type: "image", url: "/projects/aoc2023.png" },
-        { type: "image", url: "/projects/aoc2022.png" },
-        { type: "image", url: "/projects/aoc2021.png" },
-        { type: "image", url: "/projects/aoc2020.png" }
+        { type: "image", url: "projects/aoc2024.png" },
+        { type: "image", url: "projects/aoc2023.png" },
+        { type: "image", url: "projects/aoc2022.png" },
+        { type: "image", url: "projects/aoc2021.png" },
+        { type: "image", url: "projects/aoc2020.png" }
       ],
     },
     {
@@ -215,7 +215,7 @@ export const portfolioData: PortfolioData = {
       link: "https://github.com/Ronkiji/Rooster-V2",
       skills: ["Java", "JSP", "JavaScript", "MySQL", "HTML", "CSS", "Tomcat"],
       isPreAI: true,
-      media: [{ type: "video", url: "/projects/rooster.mp4", thumbnail: "/projects/rooster-thumbnail.png" }],
+      media: [{ type: "video", url: "projects/rooster.mp4", thumbnail: "projects/rooster-thumbnail.png" }],
     },
     {
       title: "VoiceVend",
@@ -224,7 +224,7 @@ export const portfolioData: PortfolioData = {
       category: "Arduino",
       skills: ["C++"],
       isPreAI: true,
-      media: [{ type: "video", url: "/projects/voicevend.mp4", thumbnail: "/projects/voicevend-thumbnail.png" }],
+      media: [{ type: "video", url: "projects/voicevend.mp4", thumbnail: "projects/voicevend-thumbnail.png" }],
     },
     {
       title: "RC Car",
@@ -235,10 +235,10 @@ export const portfolioData: PortfolioData = {
       skills: ["C++"],
       isPreAI: true,
       media: [
-        { type: "image", url: "/projects/rc-car-1.jpg" },
-        { type: "image", url: "/projects/rc-car-2.jpg" },
-        { type: "image", url: "/projects/rc-car-block-diagram.png" },
-        { type: "image", url: "/projects/rc-car-schematic.png" },
+        { type: "image", url: "projects/rc-car-1.jpg" },
+        { type: "image", url: "projects/rc-car-2.jpg" },
+        { type: "image", url: "projects/rc-car-block-diagram.png" },
+        { type: "image", url: "projects/rc-car-schematic.png" },
       ],
     },
     {
@@ -249,7 +249,7 @@ export const portfolioData: PortfolioData = {
       category: "Game",
       skills: ["Java"],
       isPreAI: true,
-      media: [{ type: "video", url: "/projects/2048.mp4", thumbnail: "/projects/2048-thumbnail.png" }],
+      media: [{ type: "video", url: "projects/2048.mp4", thumbnail: "projects/2048-thumbnail.png" }],
     },
   ],
 
@@ -324,42 +324,42 @@ export const portfolioData: PortfolioData = {
       media: [
         {
           type: "image",
-          url: "/hobbies/origami-1.JPG",
+          url: "hobbies/origami-1.JPG",
           description: "My creation portrays the coming together of creatures from two different eras, two different seasons who once lived in the same area. All of the components of my artwork were constructed from scratch, including the grass, the ice caps, and the origamis. I wanted to build this because I thought that it would be an interesting idea to combine two entirely different creatures into one artwork which conveys the message that humans, despite their many dissimilarities, have to potential to come together as a whole to make this world a better place.",
         },
         {
           type: "image",
-          url: "/hobbies/origami-2.JPG",
+          url: "hobbies/origami-2.JPG",
           description: "My art shows the polluted world we live in today that affects the entire animal kingdom and the world. I want to show that the animal feasts on what we humans give to them, which contains junk. The swan is seen biting the fish, who holds junk in their stomach, which will then transfer to the swan. The pollution consumed by the swan will then put her under gene transformation. After many years, the animals will start to die from eating waste that's thrown into the water.",
         },
         {
           type: "image",
-          url: "/hobbies/origami-3.JPG",
+          url: "hobbies/origami-3.JPG",
           description: "The dolphin, admired for her intelligence, playfulness, and friendliness, has enthralled the hearts of many people. She glided through the earth’s ocean accompanied with her friends, sometimes they end up with fishes, other times they might end up with squids. She joked with her friends, splashing them with the warm and soothing water she was surrounded with. Today, the water is not as soothing - it tastes uncomfortable and there is not much space to swim as freely as she used to. Her body stings from the cuts and scars she got from clashing with the objects around her. She wants to hunt for food, but there is no food around except for the small amount of dead fishes that her trainers feed to her. She doesn’t know where her friends went. Nevertheless, she coordinates with them to put on a show, hoping that her performance will impress her trainer enough to receive a well needed piece of fish.",
         },
         {
           type: "image",
-          url: "/hobbies/wood-1.jpg",
+          url: "hobbies/wood-1.jpg",
           description: "Sling puck board game",
         },
         {
           type: "image",
-          url: "/hobbies/wood-2.jpg",
+          url: "hobbies/wood-2.jpg",
           description: "Keepsake box",
         },
         {
           type: "image",
-          url: "/hobbies/wood-3.jpg",
+          url: "hobbies/wood-3.jpg",
           description: "Keepsake box",
         },
         {
           type: "image",
-          url: "/hobbies/wood-4.jpg",
+          url: "hobbies/wood-4.jpg",
           description: "Cutting board shaped like butcher knife",
         },
         {
           type: "image",
-          url: "/hobbies/wood-5.jpg",
+          url: "hobbies/wood-5.jpg",
           description: "Rolling ship with launchable \"canon\"",
         },
       ],
