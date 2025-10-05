@@ -7,7 +7,7 @@ import { ContactSection } from "@/components/contact-section"
 
 export default function Home() {
   return (
-    <main className="relative md:pl-48">
+    <main className="relative md:pl-32">
       <Navigation />
       <HeroSection />
       {/* <AboutSection /> */}

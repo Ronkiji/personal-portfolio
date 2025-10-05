@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
-const sections = ["About", "Experience", "Projects", "Skills", "Hobbies", "Contact"]
+const sections = ["Experience", "Projects", "Hobbies", "Contact"]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)

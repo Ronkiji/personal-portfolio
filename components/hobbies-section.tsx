@@ -40,7 +40,7 @@ export function HobbiesSection() {
 
               {hobby.media && hobby.media.length > 0 && (
                 <div className="grid grid-cols-3 gap-2 mb-4">
-                  {hobby.media.map((item, mediaIndex) => (
+                  {hobby.media.slice(0, 3).map((item, mediaIndex) => (
                     <button
                       key={mediaIndex}
                       onClick={() => openLightbox(hobby.media!, mediaIndex)}
@@ -54,6 +54,11 @@ export function HobbiesSection() {
                       {item.type === "video" && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                           <Play className="h-6 w-6 text-white" />
+                        </div>
+                      )}
+                      {mediaIndex === 2 && hobby.media!.length > 3 && (
+                        <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xl font-bold">
+                          +{hobby.media!.length - 3}
                         </div>
                       )}
                     </button>
