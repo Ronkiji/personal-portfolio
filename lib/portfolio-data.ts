@@ -9,7 +9,7 @@ export interface Experience {
 }
 
 export interface ProjectMedia {
-  type: "image" | "video"
+  type: "image" | "video" | "youtube" | "pdf"
   url: string
   thumbnail?: string
 }
@@ -30,7 +30,7 @@ export interface Skill {
 }
 
 export interface HobbyMedia {
-  type: "image" | "video"
+  type: "image" | "video" | "youtube" | "pdf"
   url: string
   description: string
   thumbnail?: string
@@ -138,8 +138,7 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       title: "Image Captioning with Encoders",
-      description:
-        "DistilBART and CLIP. Work in Progress.",
+      description: "DistilBART and CLIP. Work in Progress.",
       link: "https://github.com/AryanChawla1/image-captioning",
       category: "Deep Learning Model",
       skills: ["Python", "Keras", "Pandas", "NumPy", "Scikit-learn"],
@@ -153,8 +152,7 @@ export const portfolioData: PortfolioData = {
       category: "Deep Learning Model",
       skills: ["Python", "Keras", "Pandas", "NumPy", "Scikit-learn"],
       media: [
-        { type: "image", url: "/stock-lstm-dashboard.png" },
-        { type: "image", url: "/stock-performance-plot.png" },
+        { type: "pdf", url: "projects/fiam-demo.pdf", thumbnail: "projects/fiam-thumbnail.png"},
       ],
     },
     {
@@ -166,7 +164,7 @@ export const portfolioData: PortfolioData = {
       skills: ["C#", "Unity", "Networking", "Photon"],
       media: [
         { type: "image", url: "projects/gunslingers-poster.png" },
-        { type: "video", url: "projects/gunslingers-video.mp4", thumbnail: "projects/gunslingers-thumbnail.png"},
+        { type: "youtube", url: "https://youtu.be/alM4GluuS0k", thumbnail: "projects/gunslingers-thumbnail.png" },
       ],
     },
     {
@@ -194,7 +192,7 @@ export const portfolioData: PortfolioData = {
         { type: "image", url: "projects/aoc2023.png" },
         { type: "image", url: "projects/aoc2022.png" },
         { type: "image", url: "projects/aoc2021.png" },
-        { type: "image", url: "projects/aoc2020.png" }
+        { type: "image", url: "projects/aoc2020.png" },
       ],
     },
     {
@@ -205,7 +203,7 @@ export const portfolioData: PortfolioData = {
       category: "Game",
       skills: ["React", "Django", "Python"],
       isPreAI: true,
-      media: [{ type: "image", url: "/torus-puzzle-screenshot.png" }],
+      // media: [{ type: "image", url: "/torus-puzzle-screenshot.png" }],
     },
     {
       title: "Rooster",
@@ -215,16 +213,15 @@ export const portfolioData: PortfolioData = {
       link: "https://github.com/Ronkiji/Rooster-V2",
       skills: ["Java", "JSP", "JavaScript", "MySQL", "HTML", "CSS", "Tomcat"],
       isPreAI: true,
-      media: [{ type: "video", url: "projects/rooster.mp4", thumbnail: "projects/rooster-thumbnail.png" }],
+      media: [{ type: "youtube", url: "https://youtu.be/KHugP8jFWr8", thumbnail: "projects/rooster-thumbnail.png" }],
     },
     {
       title: "VoiceVend",
-      description:
-        "Voice controlled vending machine",
+      description: "Voice controlled vending machine",
       category: "Arduino",
       skills: ["C++"],
       isPreAI: true,
-      media: [{ type: "video", url: "projects/voicevend.mp4", thumbnail: "projects/voicevend-thumbnail.png" }],
+      media: [{ type: "youtube", url: "https://youtu.be/JOuOScYckqE", thumbnail: "projects/voicevend-thumbnail.png" }],
     },
     {
       title: "RC Car",
@@ -249,7 +246,7 @@ export const portfolioData: PortfolioData = {
       category: "Game",
       skills: ["Java"],
       isPreAI: true,
-      media: [{ type: "video", url: "projects/2048.mp4", thumbnail: "projects/2048-thumbnail.png" }],
+      media: [{ type: "youtube", url: "https://youtu.be/w69ZH2STmTc", thumbnail: "projects/2048-thumbnail.png" }],
     },
   ],
 
@@ -275,67 +272,79 @@ export const portfolioData: PortfolioData = {
   hobbies: [
     {
       title: "Piano",
-      description: "Been playing consitently for 15 years just to be worse than child prodigies. Currently learning jazz :)",
+      description:
+        "Been playing consistently for 15 years just to be worse than child prodigies. Currently learning jazz :)",
       achievements: ["RCM Level 10", "Wedding performance"],
-      media: [
-        {
-          type: "image",
-          url: "/photography-landscape-mountains.jpg",
-          description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
-        },
-      ],
+      // media: [
+      //   {
+      //     type: "image",
+      //     url: "/photography-landscape-mountains.jpg",
+      //     description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
+      //   },
+      // ],
     },
     {
       title: "Table Tennis",
       description: "Played table tennis competitively. Currently trying to get back to my prime.",
       achievements: ["Achieved several top-three finishes in provincial table tennis competitions."], // Changed to array
-      media: [
-        {
-          type: "image",
-          url: "/music-studio-setup.jpg",
-          description: "Home studio setup - MIDI keyboard, monitors, and audio interface",
-        },
-        {
-          type: "video",
-          url: "/music-production-session.mp4",
-          thumbnail: "/music-production-thumbnail.jpg",
-          description: "Live production session - Creating a synthwave track",
-        },
-      ],
+      // media: [
+      //   {
+      //     type: "image",
+      //     url: "/music-studio-setup.jpg",
+      //     description: "Home studio setup - MIDI keyboard, monitors, and audio interface",
+      //   },
+      //   {
+      //     type: "video",
+      //     url: "/music-production-session.mp4",
+      //     thumbnail: "/music-production-thumbnail.jpg",
+      //     description: "Live production session - Creating a synthwave track",
+      //   },
+      // ],
     },
     {
       title: "Esports gaming",
       description: "I enjoy competitive games... maybe a bit too much.",
-      achievements: ["D2 League of Legends", "Champion League and Unreal in Fortnite", "Peak 1772 in rapids (Chess.com)"], // Changed to array
-      media: [
-        {
-          type: "video",
-          url: "/gaming-highlight-reel.mp4",
-          thumbnail: "/gaming-thumbnail.jpg",
-          description: "Competitive gameplay highlight reel - Ranked match pentakill",
-        },
+      achievements: [
+        "D2 League of Legends",
+        "Champion League and Unreal in Fortnite",
+        "Peak 1772 in rapids (Chess.com)",
       ],
+      // media: [
+      //   {
+      //     type: "video",
+      //     url: "/gaming-highlight-reel.mp4",
+      //     thumbnail: "/gaming-thumbnail.jpg",
+      //     description: "Competitive gameplay highlight reel - Ranked match pentakill",
+      //   },
+      // ],
     },
     {
       title: "3D Origami (and other hand craft)",
       description:
         "A niche orgigami style that crafts intricate 3D sculptures by assembling many small folded paper units. Competed in Young at Arts competitions. I wrote these descriptions when I was really young so bean ice!",
-      achievements: ["2016 3D Category Winner + Junior Award, YAA", "2017 3D Category Winner + Junior Award, YAA", "2019 3D Category Winner, YAA"], // Changed to array
+      achievements: [
+        "2016 3D Category Winner + Junior Award, YAA",
+        "2017 3D Category Winner + Junior Award, YAA",
+        "2019 3D Category Winner, YAA",
+      ], // Changed to array
       media: [
         {
           type: "image",
           url: "hobbies/origami-1.JPG",
-          description: "My creation portrays the coming together of creatures from two different eras, two different seasons who once lived in the same area. All of the components of my artwork were constructed from scratch, including the grass, the ice caps, and the origamis. I wanted to build this because I thought that it would be an interesting idea to combine two entirely different creatures into one artwork which conveys the message that humans, despite their many dissimilarities, have to potential to come together as a whole to make this world a better place.",
+          description:
+            "My creation portrays the coming together of creatures from two different eras, two different seasons who once lived in the same area. All of the components of my artwork were constructed from scratch, including the grass, the ice caps, and the origamis. I wanted to build this because I thought that it would be an interesting idea to combine two entirely different creatures into one artwork which conveys the message that humans, despite their many dissimilarities, have to potential to come together as a whole to make this world a better place.",
         },
         {
           type: "image",
           url: "hobbies/origami-2.JPG",
-          description: "My art shows the polluted world we live in today that affects the entire animal kingdom and the world. I want to show that the animal feasts on what we humans give to them, which contains junk. The swan is seen biting the fish, who holds junk in their stomach, which will then transfer to the swan. The pollution consumed by the swan will then put her under gene transformation. After many years, the animals will start to die from eating waste that's thrown into the water.",
+          description:
+            "My art shows the polluted world we live in today that affects the entire animal kingdom and the world. I want to show that the animal feasts on what we humans give to them, which contains junk. The swan is seen biting the fish, who holds junk in their stomach, which will then transfer to the swan. The pollution consumed by the swan will then put her under gene transformation. After many years, the animals will start to die from eating waste that's thrown into the water.",
         },
         {
           type: "image",
           url: "hobbies/origami-3.JPG",
-          description: "The dolphin, admired for her intelligence, playfulness, and friendliness, has enthralled the hearts of many people. She glided through the earth’s ocean accompanied with her friends, sometimes they end up with fishes, other times they might end up with squids. She joked with her friends, splashing them with the warm and soothing water she was surrounded with. Today, the water is not as soothing - it tastes uncomfortable and there is not much space to swim as freely as she used to. Her body stings from the cuts and scars she got from clashing with the objects around her. She wants to hunt for food, but there is no food around except for the small amount of dead fishes that her trainers feed to her. She doesn’t know where her friends went. Nevertheless, she coordinates with them to put on a show, hoping that her performance will impress her trainer enough to receive a well needed piece of fish.",
+          description:
+            "The dolphin, admired for her intelligence, playfulness, and friendliness, has enthralled the hearts of many people. She glided through the earth’s ocean accompanied with her friends, sometimes they end up with fishes, other times they might end up with squids. She joked with her friends, splashing them with the warm and soothing water she was surrounded with. Today, the water is not as soothing - it tastes uncomfortable and there is not much space to swim as freely as she used to. Her body stings from the cuts and scars she got from clashing with the objects around her. She wants to hunt for food, but there is no food around except for the small amount of dead fishes that her trainers feed to her. She doesn’t know where her friends went. Nevertheless, she coordinates with them to put on a show, hoping that her performance will impress her trainer enough to receive a well needed piece of fish.",
         },
         {
           type: "image",
@@ -360,7 +369,7 @@ export const portfolioData: PortfolioData = {
         {
           type: "image",
           url: "hobbies/wood-5.jpg",
-          description: "Rolling ship with launchable \"canon\"",
+          description: 'Rolling ship with launchable "canon"',
         },
       ],
     },
@@ -382,6 +391,6 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://www.linkedin.com/in/sunronald/",
     website: "https://yourwebsite.com",
     discord: "ronkiji",
-    phone: "(613)-663-6733"
+    phone: "(613)-663-6733",
   },
 }

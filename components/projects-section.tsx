@@ -49,6 +49,23 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
                     alt={`${project.title} - Media ${idx + 1}`}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
+                ) : item.type === "pdf" ? (
+                  <div className="relative w-full h-full bg-muted overflow-hidden">
+                    {item.thumbnail ? (
+                      <img
+                        src={item.thumbnail || "/placeholder.svg"}
+                        alt={`${project.title} - PDF ${idx + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    ) : (
+                      <iframe
+                        src={`${item.url}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+                        className="w-full h-full pointer-events-none scale-150 origin-top-left"
+                        title={`${project.title} - PDF ${idx + 1}`}
+                      />
+                    )}
+                    <div className="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">PDF</div>
+                  </div>
                 ) : (
                   <div className="relative w-full h-full">
                     <img

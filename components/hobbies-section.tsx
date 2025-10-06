@@ -46,12 +46,33 @@ export function HobbiesSection() {
                       onClick={() => openLightbox(hobby.media!, mediaIndex)}
                       className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer hover:ring-2 hover:ring-primary transition-all"
                     >
-                      <img
-                        src={item.type === "video" ? item.thumbnail || item.url : item.url}
-                        alt={item.description}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      {item.type === "video" && (
+                      {item.type === "pdf" ? (
+                        <div className="relative w-full h-full bg-muted overflow-hidden">
+                          {item.thumbnail ? (
+                            <img
+                              src={item.thumbnail || "/placeholder.svg"}
+                              alt={item.description}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                          ) : (
+                            <iframe
+                              src={`${item.url}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+                              className="w-full h-full pointer-events-none scale-150 origin-top-left"
+                              title={item.description}
+                            />
+                          )}
+                          <div className="absolute top-1 right-1 bg-black/60 text-white text-xs px-1.5 py-0.5 rounded">
+                            PDF
+                          </div>
+                        </div>
+                      ) : (
+                        <img
+                          src={item.type === "video" || item.type === "youtube" ? item.thumbnail || item.url : item.url}
+                          alt={item.description}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      )}
+                      {(item.type === "video" || item.type === "youtube") && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                           <Play className="h-6 w-6 text-white" />
                         </div>
