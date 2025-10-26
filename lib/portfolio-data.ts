@@ -39,7 +39,7 @@ export interface HobbyMedia {
 export interface Hobby {
   title: string
   description: string
-  achievements?: string[] // Changed from single achievement to array of achievements
+  achievements?: string[]
   media?: HobbyMedia[]
 }
 
@@ -56,7 +56,7 @@ export interface PortfolioData {
   name: string
   title: string
   tagline: string
-  avatar?: string // Add avatar field
+  avatar?: string
   about: string[]
   experience: Experience[]
   projects: Project[]
@@ -275,31 +275,11 @@ export const portfolioData: PortfolioData = {
       description:
         "Been playing consistently for 15 years just to be worse than child prodigies. Currently learning jazz :)",
       achievements: ["RCM Level 10", "Wedding performance"],
-      // media: [
-      //   {
-      //     type: "image",
-      //     url: "/photography-landscape-mountains.jpg",
-      //     description: "Mountain landscape at golden hour - Rocky Mountains, Colorado",
-      //   },
-      // ],
     },
     {
       title: "Table Tennis",
       description: "Played table tennis competitively. Currently trying to get back to my prime.",
       achievements: ["Achieved several top-three finishes in provincial table tennis competitions."], // Changed to array
-      // media: [
-      //   {
-      //     type: "image",
-      //     url: "/music-studio-setup.jpg",
-      //     description: "Home studio setup - MIDI keyboard, monitors, and audio interface",
-      //   },
-      //   {
-      //     type: "video",
-      //     url: "/music-production-session.mp4",
-      //     thumbnail: "/music-production-thumbnail.jpg",
-      //     description: "Live production session - Creating a synthwave track",
-      //   },
-      // ],
     },
     {
       title: "Esports gaming",
@@ -309,14 +289,6 @@ export const portfolioData: PortfolioData = {
         "Champion League and Unreal in Fortnite",
         "Peak 1772 in rapids (Chess.com)",
       ],
-      // media: [
-      //   {
-      //     type: "video",
-      //     url: "/gaming-highlight-reel.mp4",
-      //     thumbnail: "/gaming-thumbnail.jpg",
-      //     description: "Competitive gameplay highlight reel - Ranked match pentakill",
-      //   },
-      // ],
     },
     {
       title: "3D Origami (and other hand craft)",
@@ -326,7 +298,7 @@ export const portfolioData: PortfolioData = {
         "2016 3D Category Winner + Junior Award, YAA",
         "2017 3D Category Winner + Junior Award, YAA",
         "2019 3D Category Winner, YAA",
-      ], // Changed to array
+      ],
       media: [
         {
           type: "image",
