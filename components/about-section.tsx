@@ -1,4 +1,5 @@
 import { portfolioData } from "@/lib/portfolio-data"
+import { ScrollReveal } from "./scroll-reveal"
 
 export function AboutSection() {
   return (
@@ -7,9 +8,9 @@ export function AboutSection() {
         <h2 className="text-4xl md:text-5xl font-bold mb-12">About</h2>
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           {portfolioData.about.map((paragraph, index) => (
-            <p key={index} className="animate-fade-in-up opacity-0" style={{ animationDelay: `${index * 0.1}s` }}>
-              {paragraph}
-            </p>
+            <ScrollReveal key={index} delay={index * 100}>
+              <p>{paragraph}</p>
+            </ScrollReveal>
           ))}
         </div>
       </div>

@@ -56,6 +56,7 @@ export interface PortfolioData {
   name: string
   title: string
   tagline: string
+  avatar?: string // Add avatar field
   about: string[]
   experience: Experience[]
   projects: Project[]
@@ -68,6 +69,7 @@ export const portfolioData: PortfolioData = {
   name: "Ronald Sun",
   title: "SWE & ML Dev",
   tagline: "Automate everything so my future self can chill.",
+  avatar: "experiences/headshot.jpg", 
 
   about: ["a", "b", "c"],
 
@@ -151,9 +153,7 @@ export const portfolioData: PortfolioData = {
       link: "https://github.com/Ronkiji/FIAM-hack",
       category: "Deep Learning Model",
       skills: ["Python", "Keras", "Pandas", "NumPy", "Scikit-learn"],
-      media: [
-        { type: "pdf", url: "projects/fiam-demo.pdf", thumbnail: "projects/fiam-thumbnail.png"},
-      ],
+      media: [{ type: "pdf", url: "projects/fiam-demo.pdf", thumbnail: "projects/fiam-thumbnail.png" }],
     },
     {
       title: "Gunslinger’s Roulette",

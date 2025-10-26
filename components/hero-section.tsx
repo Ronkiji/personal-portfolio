@@ -1,12 +1,25 @@
 import { portfolioData } from "@/lib/portfolio-data"
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
+import Image from "next/image"
 
 export function HeroSection() {
-  const { name, title, tagline } = portfolioData
+  const { name, title, tagline, avatar } = portfolioData
 
   return (
     <section className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24">
       <div className="max-w-4xl w-full">
+        {avatar && (
+          <div className="mb-8 animate-fade-in opacity-0">
+            <Image
+              src={avatar || "/placeholder.svg"}
+              alt={name}
+              width={160}
+              height={160}
+              className="rounded-full border-4 border-primary/20 shadow-lg"
+            />
+          </div>
+        )}
+
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance animate-fade-in-up opacity-0">
           {name}
         </h1>
