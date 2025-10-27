@@ -69,7 +69,7 @@ export const portfolioData: PortfolioData = {
   name: "Ronald Sun",
   title: "SWE & ML Dev",
   tagline: "Automate everything so my future self can chill.",
-  avatar: "experiences/headshot.jpg", 
+  avatar: "experiences/headshot.png", 
 
   about: ["a", "b", "c"],
 

@@ -13,8 +13,8 @@ export function HeroSection() {
             <Image
               src={avatar || "/placeholder.svg"}
               alt={name}
-              width={160}
-              height={160}
+              width={250}
+              height={250}
               className="rounded-full border-4 border-primary/20 shadow-lg"
             />
           </div>
